@@ -6,12 +6,12 @@ ARG PROFILE=dev
 
 WORKDIR /opt/app
 
-COPY opentelemetry-javaagent.jar /opt/app/opentelemetry-javaagent.jar
+COPY opentelemetry-javaagent.jar opentelemetry-javaagent.jar
 
 COPY ${JAR_FILE} blog.jar
 
 
-ENV OTEL_SERVICE_NAME=zerofiltre-backend-nsfabrice2009-${PROFILE}
+ENV OTEL_SERVICE_NAME=zerofiltre-backend-nkoussagregoire-${PROFILE}
 
 COPY entrypoint.sh entrypoint.sh
 
